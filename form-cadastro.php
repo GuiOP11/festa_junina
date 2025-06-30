@@ -39,16 +39,19 @@
              <div class="mb-3">
                 <label for="idcurso" class="form-label">Curso Responsável</label>
     
-                <select class="form-select" name="idcurso" aria-label="Default select example">
+                <select name= "idcurso" class="form-select" aria-label="Default select example">
                     <?php
+                    require_once "CursoDAO.php";
+                    $dados  = CursoDAO :: buscarCursos();
+                    for ($i=0; $i < count($dados); $i++) {                        
                     
-                    //
+                    
                     ?>
                     
-                    <option name="" ></option>
+                   <option value="<?=$dados[$i]["idcurso"]?>"><?=$dados[$i]["nome"]?></option>   
                    <?php
                    
-                   
+                    }
                    ?>
                     
                 </select>

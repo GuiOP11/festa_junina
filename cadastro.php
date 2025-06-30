@@ -1,6 +1,6 @@
 <?php
 require_once "CursoDAO.php";
-CursoDAO:: cadastrar($_GET);
+CursoDAO:: cadastro($_GET);
 
 
 echo "<h3>Deu Opa ";
